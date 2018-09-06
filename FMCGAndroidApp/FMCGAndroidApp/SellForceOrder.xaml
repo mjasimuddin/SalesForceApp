@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FMCGAndroidApp.SellForceOrder">
+
+            <StackLayout Padding="20">
+                <Label Text="Stock Out Sell Order"
+                       HorizontalTextAlignment="Center"
+                       FontSize="15"
+                       FontAttributes="Bold"/>
+                
+                <Picker x:Name="picker" Title="--Select a Area--">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Shyamoli</x:String>
+                                <x:String>Mirpur</x:String>
+                                <x:String>Mohamadpur</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+                <Picker x:Name="shop" Title="--Select a Shop--">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Alpona Store</x:String>
+                            <x:String>Vai Vai Store</x:String>
+                            <x:String>Zaki Store</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker x:Name="category" Title="--Select a Category--">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Food Item</x:String>
+                            <x:String>Kitchen</x:String>
+                            <x:String>Fareness Item</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker x:Name="item" Title="--Select a Item--">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Biskut</x:String>
+                            <x:String>Rice Cooker</x:String>
+                            <x:String>Clear Man Shampu</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+        <Entry Placeholder="Enter Quantity" x:Name="Quantity" />
+
+        <Button Text="Add" 
+                        x:Name="AddButton"
+                        Clicked="AddButton_OnClicked"
+                        BackgroundColor="PaleVioletRed"/>
+
+
+    </StackLayout>
+
+</ContentPage>
